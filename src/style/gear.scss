@@ -1,0 +1,212 @@
+@-webkit-keyframes clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes counter-clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes counter-clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes fadeTop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeTop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes counter-clockwiseTop {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+  /*正方形容器*/
+  .siderbar .gearbox {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -99px;
+    left: -36px;
+    border: none;
+    transform: scale(0.15);
+  }
+
+  .siderbar .gear {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1);
+  }
+  .siderbar .gear.one {
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+  /*齿轮*/
+  .siderbar .icon-gear {
+    font-size: 64px;
+    width: 100px;
+    height: 100px;
+    color: rgb(46, 124, 198);
+    position: absolute;
+    text-align: center;
+    line-height: 100px;
+    z-index: 1;
+  }
+  /*齿轮中的小圈*/
+  .siderbar .icon-gear:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -9px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #245892;
+    border: 3px solid rgb(46, 124, 198);
+    z-index: 1;
+  }
+
+  /*内弧*/
+  .siderbar .arc-in {
+    width: 76px;
+    height: 76px;
+    margin-top: -53px;
+    margin-left: -53px;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    transform: rotate(50deg);
+  }
+
+  /*外弧*/
+  .siderbar .arc-out {
+    width: 150px;
+    height: 150px;
+    margin-top: -93px;
+    margin-left: -93px;
+    border-radius: 50%;
+    border: 18px solid transparent;
+    border-bottom: 18px solid #fff;
+    transform: rotate(-65deg);
+  }
+
+  .siderbar .gear .icon-gear {
+    -webkit-animation: clockwiseTop 3s infinite linear;
+    -moz-animation: clockwiseTop 3s infinite linear;
+  }
+  .siderbar .gear.arc-in {
+    -webkit-animation: counter-clockwiseTop 1s infinite cubic-bezier(0.45, 0.18, 0.45, 0.72);
+    -moz-animation: counter-clockwiseTop 1s infinite cubic-bezier(0.45, 0.18, 0.45, 0.72);
+  }
+  .siderbar .gear.arc-out {
+    -webkit-animation: clockwiseTop 1s infinite cubic-bezier(0.45, 0.18, 0.45, 0.72);
+    -moz-animation: clockwiseTop 1s infinite cubic-bezier(0.45, 0.18, 0.45, 0.72);
+  }
+
+  .siderbar .logo_bg {
+    -webkit-animation: fadeTop 10s infinite cubic-bezier(0.6, 0.02, 0.4, 0.98);
+    -moz-animation: fadeTop 10s infinite cubic-bezier(0.6, 0.02, 0.4, 0.98);
+  }
+
